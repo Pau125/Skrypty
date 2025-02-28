@@ -1,0 +1,60 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - check_opening_hours
+  - show_menu
+  - place_order
+  - provide_address
+  - affirm
+  - deny
+
+entities:
+  - time
+  - day
+  - dish
+  - modification
+  - address
+
+slots:
+  time:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: time
+  day:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: day
+  dish:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: dish
+  address:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: address
+
+responses:
+  utter_greet:
+    - text: "Cześć! W czym mogę pomóc?"
+  utter_goodbye:
+    - text: "Do widzenia! Dziękujemy za zamówienie."
+  utter_ask_address:
+    - text: "Proszę podać adres dostawy."
+  utter_confirm_order:
+    - text: "Potwierdzam zamówienie: {dish}. Czy wszystko się zgadza?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_check_opening_hours
+  - action_show_menu
+  - action_process_order
+  - action_confirm_pickup_time 

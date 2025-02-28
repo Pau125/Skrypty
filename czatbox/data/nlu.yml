@@ -1,0 +1,50 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - cześć
+      - dzień dobry
+      - hej
+      - witam
+      - dobry wieczór
+
+  - intent: goodbye
+    examples: |
+      - do widzenia
+      - pa
+      - żegnaj
+      - do zobaczenia
+      - dobranoc
+
+  - intent: check_opening_hours
+    examples: |
+      - czy jesteście dziś otwarci?
+      - o której zamykacie?
+      - do której dzisiaj pracujecie?
+      - czy w [poniedziałek](day) jesteście czynni?
+      - czy o [15:00](time) będziecie otwarci?
+      - czy w [sobotę](day) o [20:00](time) można przyjść?
+
+  - intent: show_menu
+    examples: |
+      - co macie w menu?
+      - jakie dania oferujecie?
+      - pokaż kartę
+      - co mogę zamówić?
+      - jakie macie dania?
+
+  - intent: place_order
+    examples: |
+      - poproszę [pizzę margheritę](dish)
+      - chcę zamówić [spaghetti](dish)
+      - [burger](dish) poproszę
+      - czy mogę prosić o [lasagne](dish) [bez sera](modification)?
+      - poproszę [pizzę pepperoni](dish) [na cienkim cieście](modification)
+
+  - intent: provide_address
+    examples: |
+      - [ul. Kwiatowa 15/2, Warszawa](address)
+      - [Marszałkowska 100, Warszawa](address)
+      - [Aleja Niepodległości 200](address)
+      - mój adres to [Puławska 15 m 10](address) 

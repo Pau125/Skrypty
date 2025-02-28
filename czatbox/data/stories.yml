@@ -1,0 +1,18 @@
+version: "3.1"
+
+stories:
+  - story: menu path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: show_menu
+      - action: action_show_menu
+
+  - story: order path
+    steps:
+      - intent: place_order
+      - action: utter_ask_address
+      - intent: provide_address
+      - action: action_process_order
+      - intent: goodbye
+      - action: utter_goodbye 

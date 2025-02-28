@@ -1,0 +1,9 @@
+{
+    "items": [
+        {"name": "Pizza Margherita", "price": 25},
+        {"name": "Pizza Pepperoni", "price": 30},
+        {"name": "Spaghetti Bolognese", "price": 28},
+        {"name": "Lasagne", "price": 32},
+        {"name": "Burger Classic", "price": 27}
+    ]
+} 

@@ -1,0 +1,27 @@
+version: "3.1"
+
+rules:
+  - rule: Respond to greeting
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Show menu when asked
+    steps:
+      - intent: show_menu
+      - action: action_show_menu
+
+  - rule: Say goodbye when user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Zapytaj o adres po złożeniu zamówienia
+    steps:
+      - intent: place_order
+      - action: utter_ask_address
+
+  - rule: Process order after address provided
+    steps:
+      - intent: provide_address
+      - action: action_process_order 
